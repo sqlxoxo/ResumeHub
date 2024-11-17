@@ -3,45 +3,108 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Портфолио</title>
+		<title>Portfolio</title>
 		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<header>
-			<h1>Мое портфолио</h1>
+			<div class="container">
+				<h1>Stanislav Buberenko</h1>
+				<p>Frontend Developer | Backend Developer | Programmer</p>
+			</div>
 		</header>
+
+		<nav>
+			<ul>
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#projects">Portfolio</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
 		<main>
-			<section id="projects">
-				<h2>Мои проекты</h2>
-				<div class="project">
-					<h3>Проект 1</h3>
-					<p>Описание проекта 1</p>
-					<a href="https://github.com/sqlxoxo/SimplestCardGame"
-						>Ссылка на проект 1</a
-					>
-				</div>
-				<div class="project">
-					<h3>Проект 2</h3>
-					<p>Описание проекта 2</p>
-					<a href="https://github.com/sqlxoxo/Waver">Ссылка на проект 2</a>
-				</div>
+			<section id="about">
+				<h2>About Me</h2>
+				<p>
+					My name is Stanislav, and I am a 20-year-old student at Odessa
+					National Polytechnic University (ONPU). I am pursuing a degree at the
+					Institute of Computer Systems (ICS) in the field of Computer and
+					Information Technology (specialization 126). My academic focus is on
+					programming, where I have developed strong skills in Python (BackEnd),
+					HTML/CSS, and JavaScript (FrontEnd). I primarily work with Linux-based
+					distributions, including Ubuntu and Fedora. I am deeply interested in
+					operating systems, programming, and all aspects of IT, constantly
+					expanding my knowledge across this ever-evolving field.
+				</p>
 			</section>
+
+			<section id="skills">
+				<h2>Skills</h2>
+				<ul>
+					<li>JavaScript</li>
+					<li>Python</li>
+					<li>HTML/CSS</li>
+					<li>Django</li>
+					<li>React</li>
+				</ul>
+			</section>
+
 			<section id="contact">
-				<h2>Связаться со мной</h2>
-				<form id="contact-form">
-					<label for="name">Имя:</label>
-					<input type="text" id="name" name="name" />
-					<label for="email">Email:</label>
-					<input type="email" id="email" name="email" />
-					<label for="message">Сообщение:</label>
-					<textarea id="message" name="message"></textarea>
-					<button type="submit">Отправить</button>
+				<h2>Contact Me</h2>
+				<p>
+					I'd love to hear from you! Fill out the form below and I'll get back
+					to you as soon as possible.
+				</p>
+				<form>
+					<input type="text" placeholder="Your Name" required />
+					<input type="email" placeholder="Your Email" required />
+					<textarea placeholder="Your Message" rows="6" required></textarea>
+					<!-- Контейнер для кнопки -->
+					<div class="button-container">
+						<button type="submit">Send Message</button>
+					</div>
+				</form>
+			</section>
+
+			<section id="projects">
+				<h2>Portfolio</h2>
+				<div id="project-list">
+					<!-- Динамически добавляемые проекты появятся здесь -->
+				</div>
+				<button id="add-project-btn">Add Project</button>
+				<form id="add-project-form" style="display: none">
+					<h3>Add New Project</h3>
+					<input
+						type="text"
+						id="project-title"
+						placeholder="Project Title"
+						required
+					/>
+					<textarea
+						id="project-description"
+						placeholder="Project Description"
+						required
+					></textarea>
+					<label for="project-image-upload">Upload Project Image</label>
+					<input type="file" id="project-image-upload" accept="image/*" />
+					<button type="submit">Add</button>
+					<button type="button" id="cancel-add">Cancel</button>
 				</form>
 			</section>
 		</main>
+
 		<footer>
-			<p>&copy; 2024 Мое портфолио</p>
+			<p>
+				&copy; 2024 Stanislav Buberenko. All Rights Reserved. mail:
+				stasik.bubernko@gmail.com -- phone number: +380968628201
+			</p>
 		</footer>
+
 		<script src="script.js"></script>
 	</body>
 </html>
